@@ -28,6 +28,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="cleartype" content="on">
     <link rel="stylesheet" href="css/main.css">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-118763542-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-118763542-1');
+</script>
+
+
     <style>
     .dropdown {
         position: relative;
@@ -46,7 +58,7 @@
 
     .dropdown-content-styled {
         background-color: #f9f9f9;
-        min-width: 160px;
+        min-width: 300px;
         box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     }
 
@@ -74,18 +86,28 @@
         <div class="inner-wrap">
 	    <img src="images/logo.jpg" style="float:left" width="70px" alt="Inclusive STEM group logo">
             <a href="index.html" class="site-title">I-Stem<!--<img src="I-Stem_logo.jpg" height="50px" width="auto" alt="I-Stem logo">--></a>
+		<nav role="navigation" class="menu top-menu">
                 <ul class="menu-item">
                     <li><a href="/">Home</a></li>
-                    <li><a href="about.html">About us</a></li>
-                    <li><a href="hackathon.html">I-Stem Hackathon</a></li>
-                    <li><a href="webinar.html">I-Stem webinar series</a></li>
-                    <li><a href="research.html">Research projects</a></li>
-                    <li><a href="advocacy.html">Advocacy and outreach</a></li>
-                    <li><a href="stories.html">Stories and profiles</a></li>
-                    <li><a href="resourcesForStudents.html">Resources for blind students</a></li>
-                    <li><a href="resourcesForUniversitiesAndCompanies.html">Resources for universities and companies</a></li>
-                    <li><a href="getInvolved.html">Get involved</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li class="dropdown"><a onclick="myFunction(this)" class="dropbtn" ahref="#activities">Activities</a>
+                        <ul id="myDropdown" class="dropdown-content dropdown-content-styled" style="">
+			<li><a href="hackathon.html">I-Stem Hackathon</a></li>
+	                <li><a href="webinar.html">I-Stem Webinar Series</a></li>
+                	<li><a href="research.html">Research Projects</a></li>
+        	        <li><a href="advocacy.html">Advocacy and Outreach</a></li>
+		       </ul>
+		    </li>
+                    <li class="dropdown"><a onclick="myFunction(this)" class="dropbtn" ahref="#activities">Resources</a>
+                        <ul id="myDropdown" class="dropdown-content dropdown-content-styled" style="">
+		         <li><a href="stories.html">Stories and Profiles</a></li>
+                         <li><a href="resourcesForStudents.html">Resources for Blind Students</a></li>
+                         <li><a href="resourcesForUniversitiesAndCompanies.html">Resources for Universities and Companies</a></li>
+		       </ul>
+		    </li>
+                    <li><a href="getInvolved.html">Get Involved</a></li>
                 </ul>
+		</nav>
         </div>
         <!-- /.inner-wrap -->
     </header>
@@ -139,7 +161,7 @@
 <h1>Get Involved</h1>
 <p>We would love for you to join our community.</p>
 <a href="getinvolved.html">Read more</a>
-                    <h1>Contact us</h1>
+                    <h1 id="#contact">Contact us</h1>
                     <p>We would love to hear from you. <a href="mailto:info@inclusivestem.org">Email us at info@inclusivestem.org</a> if you have any questions, comments or concerns.</p>
                 </div>
                 <!--div class="archive-wrap" style="display:none;">
