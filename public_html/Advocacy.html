@@ -105,6 +105,7 @@
 		       </ul>
 		    </li>
                     <li><a href="getInvolved.html">Get Involved</a></li>
+		    <li><a href="index.html#contact">Contact Us</a></li>
                 </ul>
 		</nav>
         </div>
@@ -147,6 +148,31 @@
     </div>
     <script src="js/vendor/jquery-1.9.1.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/vendor/jquery-1.9.1.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+    /* When the user clicks on the button, 
+                                                                                            toggle between hiding and showing the dropdown content */
+    function myFunction(self) {
+        $(self).siblings('.dropdown-content').toggleClass("show");
+        $(self).parent().siblings('.dropdown-content').toggleClass("show");
+    }
+
+    // Close the dropdown if the user clicks outside of it
+    window.onclick = function(event) {
+        if (!event.target.matches('.dropbtn')) {
+
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                }
+            }
+        }
+    };
+    </script>
 </body>
 
 </html>
