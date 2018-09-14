@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel='stylesheet' type="text/css" href="Main_Page_CSS.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <!--waterwheel carousel start here-->
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+  <script type="text/javascript" src="js/jquery.waterwheelCarousel.js"></script>
+  <script type="text/javascript" src="Main_Page_JS.js"></script>
+
+  <script type="text/javascript">
+  var setId = 4;
+    window.onresize = function () { location.reload(); }
+    $(document).ready(function () {
+      var carousel = $("#carousel").waterwheelCarousel({
+        flankingItems: 3,
+        movingToCenter: function ($item) {
+          $('#callback-output').prepend('movingToCenter: ' + $item.attr('id') + '<br/>');
+        },
+        movedToCenter: function ($item) {
+          $('#callback-output').prepend('movedToCenter: ' + $item.attr('id') + '<br/>');
+        },
+        movingFromCenter: function ($item) {
+          $('#callback-output').prepend('movingFromCenter: ' + $item.attr('id') + '<br/>');
+        },
+        movedFromCenter: function ($item) {
+          $('#callback-output').prepend('movedFromCenter: ' + $item.attr('id') + '<br/>');
+        },
+        clickedCenter: function ($item) {
+          $('#callback-output').prepend('clickedCenter: ' + $item.attr('id') + '<br/>');
+        }
+      });
+
+      $('#prev').bind('click', function () {
+        carousel.prev();
+        return false;
+      });
+
+      $('#next').bind('click', function () {
+        carousel.next();
+        return false;
+      });
+
+      $('#reload').bind('click', function () {
+        newOptions = eval("(" + $('#newoptions').val() + ")");
+        carousel.reload(newOptions);
+        return false;
+      });
+
+    });
+    // waterwheel carousel end here
+
+    // API function start here
+  </script>
+
+</head>
+
+<body>
+  <!-- Nav bar conatiner start here -->
+
+  <div class="topnav" id="myTopnav">
+
+    <a href="#home" class="active1">Home</a>
+    <a href="#AboutUS">About Us</a>
+    <a href="#ForStud">For Students</a>
+    <a href="#ForUni">For Universities</a>
+    <a href="#ForCorp">For Corporate</a>
+    <a href="#GetInv">Get Involved</a>
+    <a href="#Contact">Contact Us</a>
+
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+  <!-- Nav bar conatiner end here -->
+
+
+
+  <!-- ToDo List conatiner start here -->
+
+  <div class="grid-container">
+
+    <div id="myDIV" class="header">
+      <img src="Images/picture_1.jpg" alt="front Image">
+    </div>
+    <div id="test">
+      <ul id="testUL"></ul>
+    </div>
+
+  </div>
+  <!-- ToDo List conatiner end here -->
+
+
+  <div class="grid-container-underline-1"></div>
+
+
+  <!-- Products conatiner start here -->
+
+  <div>
+    <h2 class="headerproduct">Inclusive STEM Hackathon</h2>
+  </div>
+  <div class="grid-container-products">
+
+    <div id="prd1">
+      <p class="rtecenter">Inclusive STEM Hackathon is a 24-hour hackathon where blind and visually impaired developers, industry professionals and CS students come together to work on exciting and challenging problems. The aim of the hackathon is to sensitize the engineers from potential IT companies as also the wider company mindset on the functioning and efficiency of persons with blindness and low vision by working together on the project, while also allowing the participants with disabilities an opportunity to learn from experienced professionals.
+      </p>
+      <p>Unlike several other hackathons, the hackathon does not strictly enforce working on accessibility-related projects. The final projects must be accessible for people with disabilities though. This requirement ensures that participants understand accessibility hands-on, and can bring it back to their respective organisations.
+
+          Besides coding for 24 Hrs., the hackathon is also a platform for blind participants to network with company representatives (such as HR representatives and hiring managers) to share their interests, aspirations and challenges in the recruitment process or once at job. This learning in turn can help companies evaluate their policies and improve them if needed.</p>
+
+    </div>
+
+    
+  </div>
+  <!-- Products conatiner end here -->
+  <div class="grid-container-underline-1"></div>
+  
+  <div class="grid-container-products">
+<div>
+<h2>Hackathon projects</h2>
+
+<p>
+  <ul>
+    <li>
+      Team1 developed an online platform to find suitable volunteers to record audio books. This can be extended to find volunteers for other services as well.    
+    </li>
+
+    <li>
+      Team2 worked on a Twitter trend finder using Twitter APIs and NLP techniques.
+    </li>
+
+    <li>
+      Team3 addressed outdoor navigation with the ability to record routes and mark specific points of interests.
+    </li>
+
+    <li>
+      Team4 worked on currency identification for the blind which is especially useful after Demonetization, since the identifying features to distinguish currency by the blind are no longer available.
+    </li>
+
+    <li>
+      Team5 implemented an app that provides detailed information about places around the user in an accessible interface.
+    </li>
+
+    <li>
+      Team6 developed an app to help Model UN delegates by not only scraping credible websites and providing a schedule of popular MUN conferences, but also leveraging state-of-the-art text summarisation research.    
+    </li>
+
+    <li>
+      Team7 implemented a novel land registration system using blockchain technology.    
+    </li>
+
+    <li>
+      Team8 worked on realtime object detection system using computer vision techniques.  
+    </li>
+
+    <li>
+      To encourage math and science in young children, Team9 worked on a math quiz game for elementary school students with extensive customisation for both students and their teachers.    
+    </li>
+
+    <li>
+      Team10 combined their knowledge in computer vision and NLP to identify objects in an image, determine relationship between them and return a description of this relationship.
+    </li>
+
+    <li>
+      Team11 implemented a novel game of snakes and ladders with Harry Potter.    
+    </li>
+
+    <li>
+      Team12 developed an app to rate and review accessibility features in public places.
+    </li>
+
+  </ul>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </p>
+  </div>
+
+  </div>
+
+  <div class="grid-container-underline-2"></div>
+  <!-- Carousel conatiner start here -->
+  <div class="grid-container-products">
+  <div id="carousel">
+
+    <a>
+      <img src="Images/Austin.jpg">
+    </a>
+    <a>
+      <img src="Images/NewYork.jpg">
+    </a>
+    <a>
+      <img src="Images/oakland.jpg">
+    </a>
+    <a >
+      <img src="Images/Phoenix.jpg">
+    </a>
+    <a>
+      <img src="Images/boston.jpg">
+    </a>
+  </div>
+</div>
+  <!-- Carousel conatiner end here -->
+
+
+  <div class="grid-container-underline-2"></div>
+
+  <!-- Footer conatiner Start here -->
+
+
+  <footer id="myFooter">
+    <div class="grid-container-footer">
+
+      <div class="grid-item">
+        <h6>About us</h6>
+        <ul>
+          <li>
+            <a href="#">Company Information</a>
+          </li>
+          <li>
+            <a href="#">Contact us</a>
+          </li>
+          <li>
+            <a href="#">Reviews</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="grid-item">
+        <h6>Support</h6>
+        <ul>
+          <li>
+            <a href="#">FAQ</a>
+          </li>
+          <li>
+            <a href="#">Careers</a>
+          </li>
+          <li>
+            <a href="#">Forums</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="grid-item">
+        <div class="social-networks">
+          <a href="#" class="twitter">
+            <i class="fa fa-twitter"></i>
+          </a>
+          <a href="#" class="facebook">
+            <i class="fa fa-facebook"></i>
+          </a>
+          <a href="#" class="google">
+            <i class="fa fa-google-plus"></i>
+          </a>
+        </div>
+        <button type="button" class="btn btn-default">Contact us</button>
+      </div>
+
+    </div>
+  </footer>
+  <div class="footer-copyright">
+    <p>© NIkhil Kanojia </p>
+  </div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,412 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+.container{
+  display: grid !important;
+  /* padding: 0em !important; */
+  width: 100% !important;
+  position:absolute !important;
+  background-color: white;
+
+}
+
+img{
+    width: 250%;
+    height:auto;
+    margin-left: -15%;
+    margin-top: -14%;
+}
+
+
+
+
+
+/* To-Do tab CSS start */
+
+.grid-container{
+  width: 100%;
+background-color: lightgrey;
+display: flex;
+padding: 0em !important;
+
+}
+
+
+
+#myDIV{
+  flex: 2;
+  padding: 8%;
+}
+
+
+#test{
+  flex: 2;
+  flex-wrap: col wrap;
+  padding: 4%;
+  padding-top: 10%;
+}
+/* To-Do tab CSS end */
+
+/* Product tab CSS start */
+
+
+.headerproduct{
+  margin-left: 12%;
+}
+
+.grid-container-products{
+  display: flex;
+  margin-top: 5%;
+  width: 85%;
+  padding-left: 4%;
+  margin-left: 8%;
+  margin-bottom: 8%;
+
+}
+
+
+/* Under Line CSS start */
+
+.grid-container-underline-1{
+  height: 5px;
+  background-color: lightcoral;
+  }
+
+  .grid-container-underline-2{
+    height: 5px;
+    background-color: lightcoral;
+    }
+  /* Under Line CSS end */
+
+  /* Navigation Bar CSS*/
+
+  .topnav {
+    overflow: hidden;
+    background-color: #000033;
+    width: 100% !important;
+    left: 0;
+    top: 0;
+   }
+  
+  .topnav a {
+   align-items: center;
+    display:inline-block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    margin-left: 150px;
+    margin-right: -150px;
+  
+  }
+  
+  .topnav a:hover {
+    background-color: lightcoral;
+    color: black;
+  }
+  
+  .active1 {
+    background-color: lightcoral;
+    color: white;
+  }
+  
+  .topnav .icon {
+    display: none;
+  }
+  
+  
+
+
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Navigation Bar CSS*/
+  
+  /* list items */
+  #myUL li {
+    cursor: pointer;
+    position: relative;
+    padding: 10px 8px 10px 40px;
+    list-style-type: none;
+    font-size: 18px;
+    transition: 0.2s;
+    background-color:white;
+    width: 12em;
+    border: 1px solid black;
+    margin: 10px 0;
+  }
+
+  
+  /* close button CSS */
+  .close {
+     position: absolute;
+    right: 0;
+    top: 0;
+    padding: 12px 16px 12px 16px;
+  }
+  
+  /* header CSS */
+  .header {
+    /* background-color: #f44336; */
+    padding: 30px 40px;
+    color: white;
+    text-align: center;
+  }  
+
+  /* CArasoul CSS*/
+
+  .carasoul{
+    /* border-radius: 50%; */
+    width: 18%;
+  }
+
+
+  #carousel {
+    width: 20%;
+    margin-top: 20%;
+    height: 10em;
+    margin-left: 42%;
+    position: relative;
+  }
+  #carousel img {
+    visibility:hidden; 
+    cursor: pointer;
+  }
+
+  .split-left {
+    width:450px;
+    float:left;
+  }
+  .split-right {
+    width:400px;
+    float:left;
+    margin-left:10px;
+  }
+  #callback-output {
+    height:250px;
+    overflow:scroll;
+  }
+  textarea#newoptions {
+    width:430px;
+  }
+
+/* footer css */
+
+#myFooter {
+  background-color: #3c3d41;
+  color: white;
+  padding-top: 30px;
+
+}
+
+.footer-copyright {
+  background-color: #333333;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  text-align: center;
+  color: white;
+}
+
+#myFooter .row {
+  margin-bottom: 50px;
+}
+
+#myFooter .footer-copyright p {
+  margin: 10px;
+  color: white;
+}
+
+#myFooter ul {
+  list-style-type: none;
+  padding-left: 0;
+  line-height: 1.7;
+}
+
+#myFooter h5 {
+  font-size: 18px;
+  color: white;
+  font-weight: bold;
+  margin-top: 30px;
+}
+
+#myFooter h2 a{
+  font-size: 50px;
+  text-align: center;
+  color: #fff;
+}
+
+#myFooter a {
+  color: #d2d1d1;
+  text-decoration: none;
+}
+
+#myFooter a:hover,
+#myFooter a:focus {
+  text-decoration: none;
+  color: white;
+}
+
+#myFooter .social-networks {
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 16px;
+}
+
+#myFooter .social-networks a {
+  font-size: 32px;
+  color: #f9f9f9;
+  padding: 10px;
+  transition: 0.2s;
+}
+
+#myFooter .social-networks a:hover {
+  text-decoration: none;
+}
+
+#myFooter .facebook:hover {
+  color: #0077e2;
+}
+
+#myFooter .google:hover {
+  color: #ef1a1a;
+}
+
+
+#myFooter .twitter:hover {
+  color: #00aced;
+  
+}
+
+#myFooter .btn {
+  color: white;
+  background-color: #d84b6b;
+  border-radius: 20px;
+  border: none;
+  width: 150px;
+  display: block;
+  margin: 0 auto;
+  margin-top: 10px;
+  line-height: 25px;
+}
+
+.grid-container-footer{
+  display: grid;
+  grid-column-gap: 35px;
+  grid-template-columns: auto auto auto;
+  padding: 30px;
+}
+
+
+
+#text{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 50px;
+  color: white;
+  transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+}
+
+
+@media screen and (max-width: 1021px) {
+  body{
+    width: 100%;
+  }
+
+  .topnav a {
+    align-items: center;
+     display:inline-block;
+     color: #f2f2f2;
+     text-align: center;
+     padding: 14px 16px;
+     text-decoration: none;
+     font-size: 17px;
+     margin-left: 0px;
+     margin-right: 0px;
+   
+   }
+
+   .grid-container-1{
+     text-align: center;
+   font-size: 10px;
+    }
+
+    .grid-container{
+      flex-direction: column;
+     }
+
+
+     .grid-container-products{
+      flex-direction: column;
+     }
+
+
+
+  
+}
+
+
+@media screen and (max-width: 600px) {
+ 
+
+  .topnav a:not(:first-child) {
+    display: none;
+  }
+
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }  
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+
+
+}
+
+@media screen and (max-width: 400px) {
+  /* #carousel {
+    width:100% !important;
+    height:15em !important;
+    position:relative !important;
+    overflow: hidden;
+  }
+  #carousel img {
+    width: 45%;
+    cursor:pointer !important;
+  } */
+
+  #myFooter .fa-twitter{
+    font-size: 15px;
+  }
+  
+  #myFooter .fa-facebook{
+    font-size: 15px;
+  }
+  
+  #myFooter .fa-google-plus{
+    font-size: 15px;
+  }
+
+  .grid-container-footer{
+    display: grid;
+    grid-column-gap: 35px;
+    grid-template-columns: auto auto auto;
+    padding: 10px;
+  }
+  
+
+}
