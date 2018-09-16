@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+index0.html<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="js/sowslide.js"></script>
+<style>
+body {margin:0;font-family: "Helvetica Neue","Segoe UI",Arial,sans-serif;}
+
+.top-nav {
+  overflow: hidden;
+  background-color: white;
+  position: fixed;
+  top: 0%;
+  width: 100%;
+  z-index:99;
+}
+
+.navbar-left {
+  overflow: hidden;
+  background-color: #aad03c;
+  position: relative;
+  top: 0%;
+  width: 100%;
+
+}
+
+.navbar-left a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 25px 10px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar a:hover {
+  background: #ddd;
+  color: black;
+}
+
+
+.main {
+  
+  margin-top: 30px;
+  /*height: 1500px; /* Used in this example to enable scrolling */
+
+
+}
+
+.menu-item{display:block;list-style-type: none;margin:0;padding:0; top:2%;font-weight: 700;}
+/* .dropdown {
+        position: relative;
+        display: inline-block;
+    }*/
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        /*background-color: #f9f9f9;
+        min-width: 160px;*/
+        overflow: auto;
+        /*box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);*/
+        z-index: 1;
+    }
+
+    .dropdown-content-styled {
+        background-color: #f9f9f9;
+        min-width: 300px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    }
+
+
+    .dropdown-content-styled a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+    .show {
+        display: block;
+    }
+#wrapper {
+    width:100%;
+    margin:auto;
+ }
+#wrapper video {
+    display:block;
+    width:100%;
+    margin:auto;
+ }
+@media screen and (max-width:330px){
+#wrapper {
+    width:auto;
+  }
+ }
+ * {
+    box-sizing: border-box;
+}
+
+.column {
+    float: left;
+   
+    padding: 60px;
+}
+
+/* Clearfix (clear floats) */
+
+/* General */
+
+.container {
+  position: relative;
+}
+
+
+/* Header */
+
+.header {
+  background-color: rgba(255, 255, 255, 0.95);
+  border-bottom: 1px solid #ddd;
+  
+  font-family: 'Oswald', sans-serif;
+  font-weight: 300;
+  
+  font-size: 17px;
+  padding: 15px;
+}
+
+
+/* Menu */ 
+
+.header .menu {
+  float: right;
+  list-style: none;
+  margin-top: 5px;
+}
+
+.menu > li {
+  display: inline;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.menu a {
+  color: #898989;
+}
+
+/* Dropdown */
+
+.dropdown-menu {
+  font-size: 16px;
+  margin-top: 5px;
+  min-width: 105px;
+}
+
+.dropdown-menu li a {
+  color: #898989;
+  padding: 6px 20px;
+  font-weight: 300;
+}
+
+
+/* Carousel */
+
+.slider {
+  position: relative;
+  width: 100%;
+  height: 470px;
+  border-bottom: 1px solid #ddd;
+}
+
+.slide {
+  background: transparent url('https://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/feature-gradient-transparent.png') center center no-repeat;
+  background-size: cover;
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.active-slide {
+    display: block;
+}
+
+.slide-copy h1 {
+  color: #363636;  
+  
+  font-family: 'Oswald', sans-serif;
+  font-weight: 400;
+  
+  font-size: 40px;
+  margin-top: 105px;
+  margin-bottom: 0px;
+}
+
+.slide-copy h2 {
+  color: #b7b7b7;
+  
+  font-family: 'Oswald', sans-serif;
+  font-weight: 400;
+  
+  font-size: 40px;
+  margin: 5px;
+}
+
+.slide-copy p {
+  color: #959595;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.15em;
+  line-height: 1.75em;
+  margin-bottom: 15px;
+  margin-top: 16px;
+}
+
+.slide-img {
+  text-align: right;
+}
+
+/* Slide feature */
+
+.slide-feature {
+  text-align: center;
+  background-image: url('https://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/ac.png');
+  height: 470px;
+}
+
+.slide-feature img {
+  margin-top: 112px;
+  margin-bottom: 28px;
+}
+
+.slide-feature a {
+  display: block;
+  color: #6fc5e0;
+  
+  font-family: "HelveticaNeueMdCn", Helvetica, sans-serif;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 400;
+  
+  font-size: 20px;
+}
+
+.slider-nav {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.arrow-prev {
+  margin-right: 45px;
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 9px;
+}
+
+.arrow-next {
+  margin-left: 45px;
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 9px;
+}
+
+.slider-dots {
+  list-style: none;
+  display: inline-block;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.slider-dots li {
+  color: #bbbcbc;
+  display: inline;
+  font-size: 30px;
+  margin-right: 5px;
+}
+
+.slider-dots li.active-dot {
+  color: #363636;
+}
+
+/* App links */
+
+.get-app {
+  list-style: none;
+  padding-bottom: 9px;
+  padding-left: 0px;
+  padding-top: 9px;
+}
+
+.get-app li {
+  float: left;
+  margin-bottom: 5px;
+  margin-right: 5px;
+}
+
+.get-app img {
+  height: 40px;
+}
+
+</style>
+</head>
+<body>
+<div class="top-nav">
+<div class="navbar-left" role="left navigation">
+  <img src="images/logo.jpg" style="float:left" width="70px" alt="Inclusive STEM group logo">
+            <a href="index.html" class="site-title"></a>
+  <ul class="menu-item">
+        <li><a href="/">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li class="dropdown"><a onclick="myFunction(this)" class="dropbtn" ahref="#activities">For Students</a>
+        <ul id="myDropdown" class="dropdown-content dropdown-content-styled" style="">
+			<li><a href="training.html">Advanced Technical Training Program</a></li>
+			<li><a href="hackathon.html">I-Stem Hackathon</a></li>
+			<li><a href="internship.html">I-Stem Internship Program</a></li>
+	                <li><a href="webinar.html">I-Stem Webinar Series</a></li>
+                	<li><a href="research.html">Research Projects</a></li>
+        	        <li><a href="advocacyAndOutreach.html">Advocacy and Outreach</a></li>
+		</ul>
+		</li>
+                    <li class="dropdown"><a onclick="myFunction(this)" class="dropbtn" ahref="#activities">For Universities</a>
+                        <ul id="myDropdown" class="dropdown-content dropdown-content-styled" style="">
+		         <li><a href="stories.html">Stories and Profiles</a></li>
+                         <li><a href="resourcesForStudents.html">Resources for Blind Students</a></li>
+                         <li><a href="resourcesForUniversitiesAndCompanies.html">Resources for Universities and Companies</a></li>
+		       </ul>
+		    </li>
+                    <li><a href="getInvolved.html">For Corporate</a></li>
+                    <li><a href="getInvolved.html">Get Involved</a></li>
+                    <li><a href="index.html#contact">Contact Us</a></li>
+
+                    <li style="float:right;"><a href="getInvolved.html">Login</a></li>
+                    <li style="float:right;"><a href="getInvolved.html">Register</a></li>
+                </ul>
+
+
+        </div>
+</div>
+
+<div class="main">
+
+<!--<div class="Rollcall-1">
+<div class="text-box">
+        <h4>Your image & Text is responsive and centered</h4>
+    </div>
+    <img src="images/lock-1600x800.jpg" alt="ISTEM first image about a lock"/>
+</div>-->
+<!--<div class="video-wrapper">
+		<div class="video-inner"><img class="vid" src="http://placehold.it/350x150"></div>
+</div>-->
+
+<!--<div class="header">
+      <div class="container">
+       <a href="#" class="logo-icon">
+          <img src="https://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/logo.png">
+        </a>
+
+        <ul class="menu">
+          <li><a href="#">Get the App</a></li>
+          <li><a href="#">Tutorials</a></li>
+          <li><a href="#">Magazines</a></li>
+          <li><a href="#">Web Tools</a></li>
+          <li><a href="#">Support</a></li>
+          <li><a href="#">Careers</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle">More <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Community</a></li>
+              <li><a href="#">Our Blog</a></li>
+              <li><a href="#">Maps Blog</a></li>
+              <li><a href="#">Eng Blog</a></li>
+              <li><a href="#">Advertisers</a></li>
+              <li><a href="#">Publishers</a></li>
+              <li><a href="#">About Us</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>-->
+
+    <div class="slider">
+
+      <div class="slide active-slide">
+        <div class="container">
+          <div class="row">
+            <div class="slide-copy col-xs-5">
+              <h1>Flipboard Is Your Personal Magazine</h1>
+              <p>It's a single place to discover, collect and share the news you care about.  Add your favorite social networks, publications and blogs to stay connected to the topics and people closest to you.</p>
+              
+              <ul class="get-app">
+                <li><a href="#"><img src="https://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/ios.png"></a></li>
+                <li><a href="#"><img src="https://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/android.png"></a></li>
+                <li><a href="#"><img src="https://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/windows.png"></a></li>
+                <li><a href="#"><img src="https://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/blackberry.png"></a></li>
+              </ul>
+            </div>
+            <div class="slide-img col-xs-7">
+              <img src="https://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/home.png" width="540px">
+            </div>
+          </div>
+        </div>      
+      </div>
+
+      <div class="slide slide-feature">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12">
+              <a href="#"><img src="https://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/cnn.png"></a>
+              <a href="#">Read Now</a>
+            </div>
+            
+          </div>
+        </div>      
+      </div> 
+
+      <div class="slide">
+        <div class="container">
+          <div class="row">
+            <div class="slide-copy col-xs-5">
+              <h1>Enjoy Flipboard Magazines</h1>
+              <h2>on the Web</h2>
+              <p>Millions of people use Flipboard to read and collect the news they care about, curating their favorite stories into their own magazines on any topic imaginable. Now magazines created by our readers, from Dali to End Trafficking, can be shared and enjoyed on the Web by anyone, anywhere.</p>
+              
+            </div>
+            <div class="slide-img col-xs-7">
+              <img src="https://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/magazines.png">
+            </div>
+          </div>
+        </div>      
+      </div> 
+
+
+      <div class="slide">
+        <div class="container">
+          <div class="row">
+            <div class="slide-copy col-xs-5">
+              <h1>Badges & Widgets</h1>
+              <p>Millions of people use Flipboard to read and collect the news they care about, curating their favorite stories into their own magazines. Now you can promote the ones you create or think are awesome.</p>
+              
+              <ul class="get-app">
+                <li><a href="#"><img src="https://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/ios.png"></a></li>
+                <li><a href="#"><img src="https://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/android.png"></a></li>
+                <li><a href="#"><img src="https://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/windows.png"></a></li>
+                <li><a href="#"><img src="https://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/blackberry.png"></a></li>
+              </ul>
+            </div>
+            <div class="slide-img col-xs-7">
+              <img src="https://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/bw.png" width="540px">
+            </div>
+          </div>
+        </div>      
+      </div> 
+
+    </div>
+
+    <div class="slider-nav">
+      <a href="#" class="arrow-prev"><img src="https://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/arrow-prev.png"></a>
+      <ul class="slider-dots">
+        <li class="dot active-dot">&bull;</li>
+        <li class="dot">&bull;</li>
+        <li class="dot">&bull;</li>
+        <li class="dot">&bull;</li>
+      </ul>
+      <a href="#" class="arrow-next"><img src="https://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/arrow-next.png"></a>
+    </div> 
+
+<div class="row" style="background-color:#d99254;">
+  <div class="column">
+    <a href="#"><img src="images/circle300.png" alt="Snow" style="border-radius:50%;opacity:0.5"></a>
+  </div>
+  <div class="column">
+    <a href="#"><img src="images/circle300.png" alt="Forest" style="border-radius:50%;opacity:0.5"></a>
+  </div>
+  <div class="column">
+    <a href="#"><img src="images/circle300.png" alt="Mountains" style="border-radius:50%;opacity:0.5"></a>
+  </div>
+</div>
+<div class="news" >
+   <img src="images/circle.jpg" alt="" style="float:left;">
+   <div>some text here some text herasdsasdasdasdasdasdasdesome text herasdsasdasdasdasdasdasdesome text herasdsasdasdasdasdasdasdesome text herasdsasdasdasdasdasdasdesome text herasdsasdasdasdasdasdasdesome text herasdsasdasdasdasdasdasdesome text herasdsasdasdasdasdasdasdesome text herasdsasdasdasdasdasdasdesome text herasdsasdasdasdasdasdasdesome text herasdsasdasdasdasdasdasdesome text herasdsasdasdasdasdasdasdesome text herasdsasdasdasdasdasdasde some text here some text herasdsasdasdasdasdasdasdesome text herasdsasdasdasdasdasdasdesome text herasdsasdasdasdasdasdasdesome text herasdsasdasdasdasdasdasdesome text herasdsasdasdasdasdasdasdesome text herasdsasdasdasdasdasdasdesome text herasdsasdasdasdasdasdasdesome text herasdsasdasdasdasdasdasdesome text herasdsasdasdasdasdasdasdesome text herasdsasdasdasdasdasdasdesome text herasdsasdasdasdasdasdasdesome text herasdsasdasdasdasdasdasde \n some text here some text herasdsasdasdasdasdasdasdesome text herasdsasdasdasdasdasdasdesome text herasdsasdasdasdasdasdasdesome text herasdsasdasdasdasdasdasdesome text herasdsasdasdasdasdasdasdesome text herasdsasdasdasdasdasdasdesome text herasdsasdasdasdasdasdasdesome text herasdsasdasdasdasdasdasdesome text herasdsasdasdasdasdasdasdesome text herasdsasdasdasdasdasdasdesome text herasdsasdasdasdasdasdasdesome text herasdsasdasdasdasdasdasde \n some text here some text herasdsasdasdasdasdasdasdesome text herasdsasdasdasdasdasdasdesome text herasdsasdasdasdasdasdasdesome text herasdsasdasdasdasdasdasdesome text herasdsasdasdasdasdasdasdesome text herasdsasdasdasdasdasdasdesome text herasdsasdasdasdasdasdasdesome text herasdsasdasdasdasdasdasdesome text herasdsasdasdasdasdasdasdesome text herasdsasdasdasdasdasdasdesome text herasdsasdasdasdasdasdasdesome text herasdsasdasdasdasdasdasde \n some text here some text herasdsasdasdasdasdasdasdesome text herasdsasdasdasdasdasdasdesome text herasdsasdasdasdasdasdasdesome text herasdsasdasdasdasdasdasdesome text herasdsasdasdasdasdasdasdesome text herasdsasdasdasdasdasdasdesome text herasdsasdasdasdasdasdasdesome text herasdsasdasdasdasdasdasdesome text herasdsasdasdasdasdasdasdesome text herasdsasdasdasdasdasdasdesome text herasdsasdasdasdasdasdasdesome text herasdsasdasdasdasdasdasde \n</div>
+   <div class="news" >
+   <img src="images/circle.jpg" style="float:right;">
+   <div>some text heresome text herasdsasdasdasdasdasdasdesome text herasdsasdasdasdasdasdasdesome text herasdsasdasdasdasdasdasdesome text herasdsasdasdasdasdasdasdesome text herasdsasdasdasdasdasdasdesome text herasdsasdasdasdasdasdasdesome text herasdsasdasdasdasdasdasdesome text herasdsasdasdasdasdasdasdesome text herasdsasdasdasdasdasdasdesome text herasdsasdasdasdasdasdasde some text here some text herasdsasdasdasdasdasdasdesome text herasdsasdasdasdasdasdasdesome text herasdsasdasdasdasdasdasdesome text herasdsasdasdasdasdasdasdesome text herasdsasdasdasdasdasdasdesome text herasdsasdasdasdasdasdasdesome text herasdsasdasdasdasdasdasdesome text herasdsasdasdasdasdasdasdesome text herasdsasdasdasdasdasdasdesome text herasdsasdasdasdasdasdasdesome text herasdsasdasdasdasdasdasdesome text herasdsasdasdasdasdasdasde \n some text here some text herasdsasdasdasdasdasdasdesome text herasdsasdasdasdasdasdasdesome text herasdsasdasdasdasdasdasdesome text herasdsasdasdasdasdasdasdesome text herasdsasdasdasdasdasdasdesome text herasdsasdasdasdasdasdasdesome text herasdsasdasdasdasdasdasdesome text herasdsasdasdasdasdasdasdesome text herasdsasdasdasdasdasdasdesome text herasdsasdasdasdasdasdasdesome text herasdsasdasdasdasdasdasdesome text herasdsasdasdasdasdasdasde \n some text here some text herasdsasdasdasdasdasdasdesome text herasdsasdasdasdasdasdasdesome text herasdsasdasdasdasdasdasdesome text herasdsasdasdasdasdasdasdesome text herasdsasdasdasdasdasdasdesome text herasdsasdasdasdasdasdasdesome text herasdsasdasdasdasdasdasdesome text herasdsasdasdasdasdasdasdesome text herasdsasdasdasdasdasdasdesome text herasdsasdasdasdasdasdasdesome text herasdsasdasdasdasdasdasdesome text herasdsasdasdasdasdasdasde \n</div>
+
+
+
+
+
+</div>
+
+</body>
+</html>
+		
